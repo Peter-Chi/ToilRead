@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25DC5E501809F74557808280 /* libPods-ToilRead.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB9F07D91905A571C780822 /* libPods-ToilRead.a */; };
+		D0CB7C651D7603F100A63DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C561D7603F100A63DF6 /* AppDelegate.m */; };
+		D0CB7C661D7603F100A63DF6 /* PCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C591D7603F100A63DF6 /* PCMainViewController.m */; };
+		D0CB7C671D7603F100A63DF6 /* PCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C5B1D7603F100A63DF6 /* PCNavigationController.m */; };
+		D0CB7C681D7603F100A63DF6 /* PCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C5D1D7603F100A63DF6 /* PCTabBarController.m */; };
+		D0CB7C691D7603F100A63DF6 /* PCMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CB7C601D7603F100A63DF6 /* PCMainViewController.xib */; };
 		D0FC248A1D759AD200E2E2E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FC24891D759AD200E2E2E1 /* main.m */; };
-		D0FC248D1D759AD200E2E2E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FC248C1D759AD200E2E2E1 /* AppDelegate.m */; };
-		D0FC24901D759AD200E2E2E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FC248F1D759AD200E2E2E1 /* ViewController.m */; };
-		D0FC24931D759AD200E2E2E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FC24911D759AD200E2E2E1 /* Main.storyboard */; };
 		D0FC24961D759AD200E2E2E1 /* ToilRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0FC24941D759AD200E2E2E1 /* ToilRead.xcdatamodeld */; };
 		D0FC24981D759AD200E2E2E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FC24971D759AD200E2E2E1 /* Assets.xcassets */; };
 		D0FC249B1D759AD200E2E2E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FC24991D759AD200E2E2E1 /* LaunchScreen.storyboard */; };
@@ -28,13 +31,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		226276648C60BB1647AFB25C /* Pods-ToilRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToilRead.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToilRead/Pods-ToilRead.debug.xcconfig"; sourceTree = "<group>"; };
+		7EB9F07D91905A571C780822 /* libPods-ToilRead.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToilRead.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0CB7C551D7603F100A63DF6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0CB7C561D7603F100A63DF6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0CB7C581D7603F100A63DF6 /* PCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMainViewController.h; sourceTree = "<group>"; };
+		D0CB7C591D7603F100A63DF6 /* PCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCMainViewController.m; sourceTree = "<group>"; };
+		D0CB7C5A1D7603F100A63DF6 /* PCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCNavigationController.h; sourceTree = "<group>"; };
+		D0CB7C5B1D7603F100A63DF6 /* PCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCNavigationController.m; sourceTree = "<group>"; };
+		D0CB7C5C1D7603F100A63DF6 /* PCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTabBarController.h; sourceTree = "<group>"; };
+		D0CB7C5D1D7603F100A63DF6 /* PCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCTabBarController.m; sourceTree = "<group>"; };
+		D0CB7C601D7603F100A63DF6 /* PCMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCMainViewController.xib; sourceTree = "<group>"; };
 		D0FC24851D759AD200E2E2E1 /* ToilRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToilRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FC24891D759AD200E2E2E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D0FC248B1D759AD200E2E2E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D0FC248C1D759AD200E2E2E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0FC248E1D759AD200E2E2E1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0FC248F1D759AD200E2E2E1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D0FC24921D759AD200E2E2E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0FC24951D759AD200E2E2E1 /* ToilRead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToilRead.xcdatamodel; sourceTree = "<group>"; };
 		D0FC24971D759AD200E2E2E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0FC249A1D759AD200E2E2E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +51,7 @@
 		D0FC24A11D759AD200E2E2E1 /* ToilReadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToilReadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FC24A51D759AD200E2E2E1 /* ToilReadUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToilReadUITests.m; sourceTree = "<group>"; };
 		D0FC24A71D759AD200E2E2E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2859F31D5323B59C196B0A8 /* Pods-ToilRead.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToilRead.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToilRead/Pods-ToilRead.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25DC5E501809F74557808280 /* libPods-ToilRead.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +73,207 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52B20F3C0BEC0B0EA597C18E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				226276648C60BB1647AFB25C /* Pods-ToilRead.debug.xcconfig */,
+				E2859F31D5323B59C196B0A8 /* Pods-ToilRead.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0D34DB347ED48A2677934CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EB9F07D91905A571C780822 /* libPods-ToilRead.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0CB7C471D7603F100A63DF6 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB7C481D7603F100A63DF6 /* Daily */,
+				D0CB7C611D7603F100A63DF6 /* Weibo */,
+				D0CB7C4C1D7603F100A63DF6 /* Joke */,
+				D0CB7C501D7603F100A63DF6 /* Me */,
+				D0CB7C541D7603F100A63DF6 /* Other */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		D0CB7C481D7603F100A63DF6 /* Daily */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB7C491D7603F100A63DF6 /* Controller */,
+				D0CB7C4A1D7603F100A63DF6 /* Model */,
+				D0CB7C4B1D7603F100A63DF6 /* View */,
+			);
+			path = Daily;
+			sourceTree = "<group>";
+		};
+		D0CB7C491D7603F100A63DF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0CB7C4A1D7603F100A63DF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0CB7C4B1D7603F100A63DF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0CB7C4C1D7603F100A63DF6 /* Joke */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB7C4D1D7603F100A63DF6 /* Controller */,
+				D0CB7C4E1D7603F100A63DF6 /* Model */,
+				D0CB7C4F1D7603F100A63DF6 /* View */,
+			);
+			path = Joke;
+			sourceTree = "<group>";
+		};
+		D0CB7C4D1D7603F100A63DF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0CB7C4E1D7603F100A63DF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0CB7C4F1D7603F100A63DF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0CB7C501D7603F100A63DF6 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB7C511D7603F100A63DF6 /* Controller */,
+				D0CB7C521D7603F100A63DF6 /* Model */,
+				D0CB7C531D7603F100A63DF6 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		D0CB7C511D7603F100A63DF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0CB7C521D7603F100A63DF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0CB7C531D7603F100A63DF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0CB7C541D7603F100A63DF6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB7C551D7603F100A63DF6 /* AppDelegate.h */,
+				D0CB7C561D7603F100A63DF6 /* AppDelegate.m */,
+				D0CB7C571D7603F100A63DF6 /* Controller */,
+				D0CB7C5E1D7603F100A63DF6 /* Model */,
+				D0CB7C5F1D7603F100A63DF6 /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D0CB7C571D7603F100A63DF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB7C581D7603F100A63DF6 /* PCMainViewController.h */,
+				D0CB7C591D7603F100A63DF6 /* PCMainViewController.m */,
+				D0CB7C5A1D7603F100A63DF6 /* PCNavigationController.h */,
+				D0CB7C5B1D7603F100A63DF6 /* PCNavigationController.m */,
+				D0CB7C5C1D7603F100A63DF6 /* PCTabBarController.h */,
+				D0CB7C5D1D7603F100A63DF6 /* PCTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0CB7C5E1D7603F100A63DF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0CB7C5F1D7603F100A63DF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB7C601D7603F100A63DF6 /* PCMainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0CB7C611D7603F100A63DF6 /* Weibo */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB7C621D7603F100A63DF6 /* Controller */,
+				D0CB7C631D7603F100A63DF6 /* Model */,
+				D0CB7C641D7603F100A63DF6 /* View */,
+			);
+			path = Weibo;
+			sourceTree = "<group>";
+		};
+		D0CB7C621D7603F100A63DF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0CB7C631D7603F100A63DF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0CB7C641D7603F100A63DF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D0FC247C1D759AD200E2E2E1 = {
 			isa = PBXGroup;
 			children = (
 				D0FC24871D759AD200E2E2E1 /* ToilRead */,
 				D0FC24A41D759AD200E2E2E1 /* ToilReadUITests */,
 				D0FC24861D759AD200E2E2E1 /* Products */,
+				52B20F3C0BEC0B0EA597C18E /* Pods */,
+				C0D34DB347ED48A2677934CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,15 +289,7 @@
 		D0FC24871D759AD200E2E2E1 /* ToilRead */ = {
 			isa = PBXGroup;
 			children = (
-				D0FC248B1D759AD200E2E2E1 /* AppDelegate.h */,
-				D0FC248C1D759AD200E2E2E1 /* AppDelegate.m */,
-				D0FC248E1D759AD200E2E2E1 /* ViewController.h */,
-				D0FC248F1D759AD200E2E2E1 /* ViewController.m */,
-				D0FC24911D759AD200E2E2E1 /* Main.storyboard */,
-				D0FC24971D759AD200E2E2E1 /* Assets.xcassets */,
-				D0FC24991D759AD200E2E2E1 /* LaunchScreen.storyboard */,
-				D0FC249C1D759AD200E2E2E1 /* Info.plist */,
-				D0FC24941D759AD200E2E2E1 /* ToilRead.xcdatamodeld */,
+				D0CB7C471D7603F100A63DF6 /* Class */,
 				D0FC24881D759AD200E2E2E1 /* Supporting Files */,
 			);
 			path = ToilRead;
@@ -100,6 +298,10 @@
 		D0FC24881D759AD200E2E2E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0FC24971D759AD200E2E2E1 /* Assets.xcassets */,
+				D0FC24991D759AD200E2E2E1 /* LaunchScreen.storyboard */,
+				D0FC249C1D759AD200E2E2E1 /* Info.plist */,
+				D0FC24941D759AD200E2E2E1 /* ToilRead.xcdatamodeld */,
 				D0FC24891D759AD200E2E2E1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -121,9 +323,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0FC24AA1D759AD200E2E2E1 /* Build configuration list for PBXNativeTarget "ToilRead" */;
 			buildPhases = (
+				A878B07B3428C53382286A13 /* [CP] Check Pods Manifest.lock */,
 				D0FC24811D759AD200E2E2E1 /* Sources */,
 				D0FC24821D759AD200E2E2E1 /* Frameworks */,
 				D0FC24831D759AD200E2E2E1 /* Resources */,
+				AD6B83482ABFD230FDE51159 /* [CP] Embed Pods Frameworks */,
+				4ABAE04E9D1A3D18BB0DACB5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,7 +402,7 @@
 			files = (
 				D0FC249B1D759AD200E2E2E1 /* LaunchScreen.storyboard in Resources */,
 				D0FC24981D759AD200E2E2E1 /* Assets.xcassets in Resources */,
-				D0FC24931D759AD200E2E2E1 /* Main.storyboard in Resources */,
+				D0CB7C691D7603F100A63DF6 /* PCMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,15 +415,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4ABAE04E9D1A3D18BB0DACB5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToilRead/Pods-ToilRead-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A878B07B3428C53382286A13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD6B83482ABFD230FDE51159 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToilRead/Pods-ToilRead-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0FC24811D759AD200E2E2E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0FC24901D759AD200E2E2E1 /* ViewController.m in Sources */,
+				D0CB7C661D7603F100A63DF6 /* PCMainViewController.m in Sources */,
 				D0FC24961D759AD200E2E2E1 /* ToilRead.xcdatamodeld in Sources */,
-				D0FC248D1D759AD200E2E2E1 /* AppDelegate.m in Sources */,
 				D0FC248A1D759AD200E2E2E1 /* main.m in Sources */,
+				D0CB7C671D7603F100A63DF6 /* PCNavigationController.m in Sources */,
+				D0CB7C681D7603F100A63DF6 /* PCTabBarController.m in Sources */,
+				D0CB7C651D7603F100A63DF6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,14 +496,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D0FC24911D759AD200E2E2E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0FC24921D759AD200E2E2E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D0FC24991D759AD200E2E2E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,6 +589,7 @@
 		};
 		D0FC24AB1D759AD200E2E2E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 226276648C60BB1647AFB25C /* Pods-ToilRead.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ToilRead/Info.plist;
@@ -354,6 +602,7 @@
 		};
 		D0FC24AC1D759AD200E2E2E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2859F31D5323B59C196B0A8 /* Pods-ToilRead.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ToilRead/Info.plist;
@@ -407,6 +656,7 @@
 				D0FC24AC1D759AD200E2E2E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0FC24AD1D759AD200E2E2E1 /* Build configuration list for PBXNativeTarget "ToilReadUITests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +665,7 @@
 				D0FC24AF1D759AD200E2E2E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
