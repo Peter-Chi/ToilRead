@@ -10,4 +10,9 @@
 
 @interface PCDailies : NSObject
 
+/** date */
+@property (nonatomic , copy) NSString *date;
+/** story */
+@property (nonatomic , strong) NSArray *stories;
+
 @end

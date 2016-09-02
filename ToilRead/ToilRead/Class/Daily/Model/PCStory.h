@@ -11,7 +11,7 @@
 @interface PCStory : NSObject
 
 /** id */
-@property (nonatomic , copy) NSString *id;
+@property (nonatomic , assign) NSNumber *id;
 
 /** title */
 @property (nonatomic , copy) NSString *title;
