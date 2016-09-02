@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		25DC5E501809F74557808280 /* libPods-ToilRead.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB9F07D91905A571C780822 /* libPods-ToilRead.a */; };
+		D09F7A301D781F0A0069EB16 /* PCDailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7A2E1D781F0A0069EB16 /* PCDailyViewController.m */; };
+		D09F7A311D781F0A0069EB16 /* PCDailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09F7A2F1D781F0A0069EB16 /* PCDailyViewController.xib */; };
 		D0CB7C651D7603F100A63DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C561D7603F100A63DF6 /* AppDelegate.m */; };
 		D0CB7C661D7603F100A63DF6 /* PCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C591D7603F100A63DF6 /* PCMainViewController.m */; };
 		D0CB7C671D7603F100A63DF6 /* PCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C5B1D7603F100A63DF6 /* PCNavigationController.m */; };
 		D0CB7C681D7603F100A63DF6 /* PCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C5D1D7603F100A63DF6 /* PCTabBarController.m */; };
 		D0CB7C691D7603F100A63DF6 /* PCMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CB7C601D7603F100A63DF6 /* PCMainViewController.xib */; };
+		D0D841971D788E5300153608 /* PCDailyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D841951D788E5300153608 /* PCDailyViewCell.m */; };
+		D0D841981D788E5300153608 /* PCDailyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D841961D788E5300153608 /* PCDailyViewCell.xib */; };
+		D0D8419B1D78911800153608 /* PCDailies.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D8419A1D78911800153608 /* PCDailies.m */; };
+		D0D841A11D78929D00153608 /* PCStory.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D841A01D78929D00153608 /* PCStory.m */; };
 		D0FC248A1D759AD200E2E2E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FC24891D759AD200E2E2E1 /* main.m */; };
 		D0FC24961D759AD200E2E2E1 /* ToilRead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0FC24941D759AD200E2E2E1 /* ToilRead.xcdatamodeld */; };
 		D0FC24981D759AD200E2E2E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FC24971D759AD200E2E2E1 /* Assets.xcassets */; };
@@ -33,6 +39,9 @@
 /* Begin PBXFileReference section */
 		226276648C60BB1647AFB25C /* Pods-ToilRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToilRead.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToilRead/Pods-ToilRead.debug.xcconfig"; sourceTree = "<group>"; };
 		7EB9F07D91905A571C780822 /* libPods-ToilRead.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToilRead.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09F7A2D1D781F0A0069EB16 /* PCDailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDailyViewController.h; sourceTree = "<group>"; };
+		D09F7A2E1D781F0A0069EB16 /* PCDailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDailyViewController.m; sourceTree = "<group>"; };
+		D09F7A2F1D781F0A0069EB16 /* PCDailyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDailyViewController.xib; sourceTree = "<group>"; };
 		D0CB7C551D7603F100A63DF6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0CB7C561D7603F100A63DF6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D0CB7C581D7603F100A63DF6 /* PCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCMainViewController.h; sourceTree = "<group>"; };
@@ -42,6 +51,13 @@
 		D0CB7C5C1D7603F100A63DF6 /* PCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTabBarController.h; sourceTree = "<group>"; };
 		D0CB7C5D1D7603F100A63DF6 /* PCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCTabBarController.m; sourceTree = "<group>"; };
 		D0CB7C601D7603F100A63DF6 /* PCMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCMainViewController.xib; sourceTree = "<group>"; };
+		D0D841941D788E5300153608 /* PCDailyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDailyViewCell.h; sourceTree = "<group>"; };
+		D0D841951D788E5300153608 /* PCDailyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDailyViewCell.m; sourceTree = "<group>"; };
+		D0D841961D788E5300153608 /* PCDailyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDailyViewCell.xib; sourceTree = "<group>"; };
+		D0D841991D78911800153608 /* PCDailies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDailies.h; sourceTree = "<group>"; };
+		D0D8419A1D78911800153608 /* PCDailies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDailies.m; sourceTree = "<group>"; };
+		D0D8419F1D78929D00153608 /* PCStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCStory.h; sourceTree = "<group>"; };
+		D0D841A01D78929D00153608 /* PCStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCStory.m; sourceTree = "<group>"; };
 		D0FC24851D759AD200E2E2E1 /* ToilRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToilRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FC24891D759AD200E2E2E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0FC24951D759AD200E2E2E1 /* ToilRead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToilRead.xcdatamodel; sourceTree = "<group>"; };
@@ -115,6 +131,9 @@
 		D0CB7C491D7603F100A63DF6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D09F7A2D1D781F0A0069EB16 /* PCDailyViewController.h */,
+				D09F7A2E1D781F0A0069EB16 /* PCDailyViewController.m */,
+				D09F7A2F1D781F0A0069EB16 /* PCDailyViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +141,10 @@
 		D0CB7C4A1D7603F100A63DF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0D841991D78911800153608 /* PCDailies.h */,
+				D0D8419A1D78911800153608 /* PCDailies.m */,
+				D0D8419F1D78929D00153608 /* PCStory.h */,
+				D0D841A01D78929D00153608 /* PCStory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +152,9 @@
 		D0CB7C4B1D7603F100A63DF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0D841941D788E5300153608 /* PCDailyViewCell.h */,
+				D0D841951D788E5300153608 /* PCDailyViewCell.m */,
+				D0D841961D788E5300153608 /* PCDailyViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +429,8 @@
 				D0FC249B1D759AD200E2E2E1 /* LaunchScreen.storyboard in Resources */,
 				D0FC24981D759AD200E2E2E1 /* Assets.xcassets in Resources */,
 				D0CB7C691D7603F100A63DF6 /* PCMainViewController.xib in Resources */,
+				D0D841981D788E5300153608 /* PCDailyViewCell.xib in Resources */,
+				D09F7A311D781F0A0069EB16 /* PCDailyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,12 +496,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D8419B1D78911800153608 /* PCDailies.m in Sources */,
 				D0CB7C661D7603F100A63DF6 /* PCMainViewController.m in Sources */,
 				D0FC24961D759AD200E2E2E1 /* ToilRead.xcdatamodeld in Sources */,
 				D0FC248A1D759AD200E2E2E1 /* main.m in Sources */,
+				D0D841A11D78929D00153608 /* PCStory.m in Sources */,
 				D0CB7C671D7603F100A63DF6 /* PCNavigationController.m in Sources */,
 				D0CB7C681D7603F100A63DF6 /* PCTabBarController.m in Sources */,
+				D0D841971D788E5300153608 /* PCDailyViewCell.m in Sources */,
 				D0CB7C651D7603F100A63DF6 /* AppDelegate.m in Sources */,
+				D09F7A301D781F0A0069EB16 /* PCDailyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

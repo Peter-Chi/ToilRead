@@ -8,6 +8,7 @@
 
 #import "PCTabBarController.h"
 #import "PCNavigationController.h"
+#import "PCDailyViewController.h"
 
 @interface PCTabBarController ()
 
@@ -17,7 +18,7 @@
 
 + (void)initialize
 {
-    // 后面带有UI_APPEARANCE_SELECTOR的方法, 都可以通过appearance对象来统一设置
+   
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
@@ -34,7 +35,7 @@
 {
     [super viewDidLoad];
 // 添加子控制器
-    [self setupChildVc:[[UIViewController alloc] init] title:@"日报" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupChildVc:[[PCDailyViewController alloc] init] title:@"日报" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
     [self setupChildVc:[[UIViewController alloc] init] title:@"微博" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
