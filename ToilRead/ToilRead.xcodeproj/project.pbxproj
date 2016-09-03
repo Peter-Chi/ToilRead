@@ -10,6 +10,14 @@
 		25DC5E501809F74557808280 /* libPods-ToilRead.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB9F07D91905A571C780822 /* libPods-ToilRead.a */; };
 		D01B26901D79F69F00CEA212 /* PCStoryBodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01B268F1D79F69F00CEA212 /* PCStoryBodyViewController.m */; };
 		D01B26931D7A072000CEA212 /* PCStoryBody.m in Sources */ = {isa = PBXBuildFile; fileRef = D01B26921D7A072000CEA212 /* PCStoryBody.m */; };
+		D01B26961D7A157800CEA212 /* PCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01B26951D7A157800CEA212 /* PCHeaderView.m */; };
+		D0748EC01D7AC31100316AB4 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EB31D7AC31100316AB4 /* TAAbstractDotView.m */; };
+		D0748EC11D7AC31100316AB4 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EB51D7AC31100316AB4 /* TAAnimatedDotView.m */; };
+		D0748EC21D7AC31100316AB4 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EB71D7AC31100316AB4 /* TADotView.m */; };
+		D0748EC31D7AC31100316AB4 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EB91D7AC31100316AB4 /* TAPageControl.m */; };
+		D0748EC41D7AC31100316AB4 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EBB1D7AC31100316AB4 /* SDCollectionViewCell.m */; };
+		D0748EC51D7AC31100316AB4 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EBD1D7AC31100316AB4 /* SDCycleScrollView.m */; };
+		D0748EC61D7AC31100316AB4 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EBF1D7AC31100316AB4 /* UIView+SDExtension.m */; };
 		D076313B1D79527F00624C9B /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D076313A1D79527F00624C9B /* DateUtil.m */; };
 		D09F7A301D781F0A0069EB16 /* PCDailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7A2E1D781F0A0069EB16 /* PCDailyViewController.m */; };
 		D09F7A311D781F0A0069EB16 /* PCDailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09F7A2F1D781F0A0069EB16 /* PCDailyViewController.xib */; };
@@ -46,6 +54,22 @@
 		D01B268F1D79F69F00CEA212 /* PCStoryBodyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCStoryBodyViewController.m; sourceTree = "<group>"; };
 		D01B26911D7A072000CEA212 /* PCStoryBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCStoryBody.h; sourceTree = "<group>"; };
 		D01B26921D7A072000CEA212 /* PCStoryBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCStoryBody.m; sourceTree = "<group>"; };
+		D01B26941D7A157800CEA212 /* PCHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHeaderView.h; sourceTree = "<group>"; };
+		D01B26951D7A157800CEA212 /* PCHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHeaderView.m; sourceTree = "<group>"; };
+		D0748EB21D7AC31100316AB4 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		D0748EB31D7AC31100316AB4 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		D0748EB41D7AC31100316AB4 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		D0748EB51D7AC31100316AB4 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		D0748EB61D7AC31100316AB4 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		D0748EB71D7AC31100316AB4 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		D0748EB81D7AC31100316AB4 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		D0748EB91D7AC31100316AB4 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		D0748EBA1D7AC31100316AB4 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		D0748EBB1D7AC31100316AB4 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		D0748EBC1D7AC31100316AB4 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		D0748EBD1D7AC31100316AB4 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		D0748EBE1D7AC31100316AB4 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		D0748EBF1D7AC31100316AB4 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		D07631391D79527F00624C9B /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		D076313A1D79527F00624C9B /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		D09F7A2D1D781F0A0069EB16 /* PCDailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDailyViewController.h; sourceTree = "<group>"; };
@@ -115,6 +139,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D0748EB01D7AC31100316AB4 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D0748EB11D7AC31100316AB4 /* PageControl */,
+				D0748EBA1D7AC31100316AB4 /* SDCollectionViewCell.h */,
+				D0748EBB1D7AC31100316AB4 /* SDCollectionViewCell.m */,
+				D0748EBC1D7AC31100316AB4 /* SDCycleScrollView.h */,
+				D0748EBD1D7AC31100316AB4 /* SDCycleScrollView.m */,
+				D0748EBE1D7AC31100316AB4 /* UIView+SDExtension.h */,
+				D0748EBF1D7AC31100316AB4 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		D0748EB11D7AC31100316AB4 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				D0748EB21D7AC31100316AB4 /* TAAbstractDotView.h */,
+				D0748EB31D7AC31100316AB4 /* TAAbstractDotView.m */,
+				D0748EB41D7AC31100316AB4 /* TAAnimatedDotView.h */,
+				D0748EB51D7AC31100316AB4 /* TAAnimatedDotView.m */,
+				D0748EB61D7AC31100316AB4 /* TADotView.h */,
+				D0748EB71D7AC31100316AB4 /* TADotView.m */,
+				D0748EB81D7AC31100316AB4 /* TAPageControl.h */,
+				D0748EB91D7AC31100316AB4 /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		D07631381D79524100624C9B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +193,7 @@
 		D0CB7C481D7603F100A63DF6 /* Daily */ = {
 			isa = PBXGroup;
 			children = (
+				D0748EB01D7AC31100316AB4 /* SDCycleScrollView */,
 				D0CB7C491D7603F100A63DF6 /* Controller */,
 				D0CB7C4A1D7603F100A63DF6 /* Model */,
 				D0CB7C4B1D7603F100A63DF6 /* View */,
@@ -178,6 +232,8 @@
 				D0D841941D788E5300153608 /* PCDailyViewCell.h */,
 				D0D841951D788E5300153608 /* PCDailyViewCell.m */,
 				D0D841961D788E5300153608 /* PCDailyViewCell.xib */,
+				D01B26941D7A157800CEA212 /* PCHeaderView.h */,
+				D01B26951D7A157800CEA212 /* PCHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -520,18 +576,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0D8419B1D78911800153608 /* PCDailies.m in Sources */,
+				D0748EC01D7AC31100316AB4 /* TAAbstractDotView.m in Sources */,
 				D0CB7C661D7603F100A63DF6 /* PCMainViewController.m in Sources */,
+				D01B26961D7A157800CEA212 /* PCHeaderView.m in Sources */,
 				D076313B1D79527F00624C9B /* DateUtil.m in Sources */,
 				D0FC24961D759AD200E2E2E1 /* ToilRead.xcdatamodeld in Sources */,
 				D0FC248A1D759AD200E2E2E1 /* main.m in Sources */,
+				D0748EC61D7AC31100316AB4 /* UIView+SDExtension.m in Sources */,
 				D01B26931D7A072000CEA212 /* PCStoryBody.m in Sources */,
+				D0748EC11D7AC31100316AB4 /* TAAnimatedDotView.m in Sources */,
+				D0748EC41D7AC31100316AB4 /* SDCollectionViewCell.m in Sources */,
 				D0D841A11D78929D00153608 /* PCStory.m in Sources */,
 				D0CB7C671D7603F100A63DF6 /* PCNavigationController.m in Sources */,
 				D01B26901D79F69F00CEA212 /* PCStoryBodyViewController.m in Sources */,
 				D0CB7C681D7603F100A63DF6 /* PCTabBarController.m in Sources */,
 				D0D841971D788E5300153608 /* PCDailyViewCell.m in Sources */,
 				D0CB7C651D7603F100A63DF6 /* AppDelegate.m in Sources */,
+				D0748EC21D7AC31100316AB4 /* TADotView.m in Sources */,
 				D09F7A301D781F0A0069EB16 /* PCDailyViewController.m in Sources */,
+				D0748EC31D7AC31100316AB4 /* TAPageControl.m in Sources */,
+				D0748EC51D7AC31100316AB4 /* SDCycleScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

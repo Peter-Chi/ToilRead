@@ -22,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+  
+
     self.navigationItem.title = @"文章正文";
     
     self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
@@ -35,7 +36,7 @@
     grayLogoImageView.frame = CGRectMake((self.view.frame.size.width - 65) / 2.0, 20, 65, 65);
     [self.webView insertSubview:grayLogoImageView atIndex:0];
     
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 50, self.view.bounds.size.width, 200)];
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
     self.imageView.clipsToBounds = YES;
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.webView.scrollView addSubview:self.imageView];
