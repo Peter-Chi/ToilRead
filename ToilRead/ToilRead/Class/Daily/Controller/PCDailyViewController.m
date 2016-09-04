@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import "PCDailies.h"
 #import "PCStory.h"
+#import "PCTopStory.h"
 #import "PCDailyViewCell.h"
 #import <MJExtension.h>
 #import <MJRefresh.h>
@@ -30,6 +31,9 @@
 /** 日期 */
 @property (nonatomic , strong) NSMutableArray *dates;
 
+/** topStory */
+@property (nonatomic , strong) NSArray *topStory;
+
 /** 网络请求管理者 */
 @property (nonatomic , strong) AFHTTPSessionManager *manager;
 
@@ -43,6 +47,14 @@
         _manager=[[AFHTTPSessionManager alloc]init];
     }
     return _manager;
+}
+
+-(NSArray *)topStory
+{
+    if(!_topStory) {
+        _topStory=[[NSArray alloc]init];
+    }
+    return _topStory;
 }
 
 
@@ -70,7 +82,7 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PCDailyViewCell class]) bundle:nil] forCellReuseIdentifier:@"PCDailyViewCell"];
     self.tableView.rowHeight = 100;
-    
+    //self.automaticallyAdjustsScrollViewInsets = NO;
     [SVProgressHUD show];
     
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewDailies)];
@@ -78,34 +90,31 @@
     header.stateLabel.hidden = YES;
     self.tableView.mj_header = header;
     [self.tableView.mj_header beginRefreshing];
-    
 
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreDailies)];
     self.tableView.mj_footer.hidden = NO;
    
-    [self setCycleScrollView];
-   
+    
     }
 
 -(void)setCycleScrollView
 {
-    NSArray *imagesURLStrings = @[
-                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                                  ];
     
-    // 情景三：图片配文字
-    NSArray *titles = @[@"新建交流QQ群：185534916 ",
-                        @"感谢您的支持，如果下载的",
-                        @"如果代码在使用过程中出现问题",
-                        @"您可以发邮件到gsdios@126.com"
-                        ];
+    NSMutableArray *imagesURLStrings = [[NSMutableArray alloc]init];
+    
+    NSMutableArray *titles = [[NSMutableArray alloc]init];
+    
+    for (PCTopStory *ts in self.topStory) {
+        [imagesURLStrings addObject:ts.image];
+        [titles addObject:ts.title];
+         };
+
     
     CGFloat w = self.view.bounds.size.width;
     
     
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 280, w, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 280, w, 220) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    
     
     cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     
@@ -121,9 +130,12 @@
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-    NSLog(@"---点击了第%ld张图片", (long)index);
+    PCStoryBodyViewController *storyB = [[PCStoryBodyViewController alloc]init];
+    PCTopStory *topS = self.topStory[index];
+    storyB.id = topS.id;
     
-   // [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
+    [self.navigationController pushViewController:storyB animated:YES];
+  
 }
 
 - (void)loadNewDailies
@@ -143,6 +155,11 @@
             [self.dailies addObject:daily];
             [self.dates addObject:daily.date];
         }
+        
+        self.topStory = [PCTopStory mj_objectArrayWithKeyValuesArray:responseObject[@"top_stories"]];
+        
+        [self setCycleScrollView];
+
         
         [self.tableView reloadData];
         
@@ -240,12 +257,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     PCDailies *daily=self.dailies[indexPath.section];
     PCStory *story=[PCStory mj_objectWithKeyValues:(daily.stories[indexPath.row])];
     
     PCStoryBodyViewController *storyB = [[PCStoryBodyViewController alloc]init];
     storyB.id = story.id;
+   
 
     [self.navigationController pushViewController:storyB animated:YES];
 }

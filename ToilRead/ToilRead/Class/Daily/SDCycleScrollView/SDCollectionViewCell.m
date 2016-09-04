@@ -67,6 +67,7 @@
     _titleLabel.font = titleLabelTextFont;
 }
 
+
 - (void)setupImageView
 {
     UIImageView *imageView = [[UIImageView alloc] init];

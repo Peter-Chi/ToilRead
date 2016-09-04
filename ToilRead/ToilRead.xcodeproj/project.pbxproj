@@ -19,6 +19,7 @@
 		D0748EC51D7AC31100316AB4 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EBD1D7AC31100316AB4 /* SDCycleScrollView.m */; };
 		D0748EC61D7AC31100316AB4 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EBF1D7AC31100316AB4 /* UIView+SDExtension.m */; };
 		D076313B1D79527F00624C9B /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D076313A1D79527F00624C9B /* DateUtil.m */; };
+		D07AD4821D7ACF7800ABAF19 /* PCTopStory.m in Sources */ = {isa = PBXBuildFile; fileRef = D07AD4811D7ACF7800ABAF19 /* PCTopStory.m */; };
 		D09F7A301D781F0A0069EB16 /* PCDailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7A2E1D781F0A0069EB16 /* PCDailyViewController.m */; };
 		D09F7A311D781F0A0069EB16 /* PCDailyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09F7A2F1D781F0A0069EB16 /* PCDailyViewController.xib */; };
 		D0CB7C651D7603F100A63DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CB7C561D7603F100A63DF6 /* AppDelegate.m */; };
@@ -72,6 +73,8 @@
 		D0748EBF1D7AC31100316AB4 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		D07631391D79527F00624C9B /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		D076313A1D79527F00624C9B /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		D07AD4801D7ACF7800ABAF19 /* PCTopStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCTopStory.h; sourceTree = "<group>"; };
+		D07AD4811D7ACF7800ABAF19 /* PCTopStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCTopStory.m; sourceTree = "<group>"; };
 		D09F7A2D1D781F0A0069EB16 /* PCDailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCDailyViewController.h; sourceTree = "<group>"; };
 		D09F7A2E1D781F0A0069EB16 /* PCDailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCDailyViewController.m; sourceTree = "<group>"; };
 		D09F7A2F1D781F0A0069EB16 /* PCDailyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDailyViewController.xib; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				D0D841A01D78929D00153608 /* PCStory.m */,
 				D01B26911D7A072000CEA212 /* PCStoryBody.h */,
 				D01B26921D7A072000CEA212 /* PCStoryBody.m */,
+				D07AD4801D7ACF7800ABAF19 /* PCTopStory.h */,
+				D07AD4811D7ACF7800ABAF19 /* PCTopStory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 				D0748EC21D7AC31100316AB4 /* TADotView.m in Sources */,
 				D09F7A301D781F0A0069EB16 /* PCDailyViewController.m in Sources */,
 				D0748EC31D7AC31100316AB4 /* TAPageControl.m in Sources */,
+				D07AD4821D7ACF7800ABAF19 /* PCTopStory.m in Sources */,
 				D0748EC51D7AC31100316AB4 /* SDCycleScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

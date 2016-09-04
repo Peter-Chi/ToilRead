@@ -544,9 +544,25 @@ NSString * const ID = @"cycleCell";
     long itemIndex = [self pageControlIndexWithCurrentCellIndex:indexPath.item];
     
     NSString *imagePath = self.imagePathsGroup[itemIndex];
-    
+
+    /*
+     UIViewContentModeScaleToFill,
+     UIViewContentModeScaleAspectFit,      // contents scaled to fit with fixed aspect. remainder is transparent
+     UIViewContentModeScaleAspectFill,     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
+     UIViewContentModeRedraw,              // redraw on bounds change (calls -setNeedsDisplay)
+     UIViewContentModeCenter,              // contents remain same size. positioned adjusted.
+     UIViewContentModeTop,
+     UIViewContentModeBottom,
+     UIViewContentModeLeft,
+     UIViewContentModeRight,
+     UIViewContentModeTopLeft,
+     UIViewContentModeTopRight,
+     UIViewContentModeBottomLeft,
+     UIViewContentModeBottomRight,
+     */
     if (!self.onlyDisplayText && [imagePath isKindOfClass:[NSString class]]) {
         if ([imagePath hasPrefix:@"http"]) {
+            cell.imageView.contentMode =UIViewContentModeScaleAspectFill;
             [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
         } else {
             UIImage *image = [UIImage imageNamed:imagePath];
