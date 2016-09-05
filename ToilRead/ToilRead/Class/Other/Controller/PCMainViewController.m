@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.mainImageView.image =[UIImage imageNamed:@"mainPlaceHold"];
+    self.mainImageView.backgroundColor = [UIColor clearColor];
     
     [[AFHTTPSessionManager manager]GET:@"http://news-at.zhihu.com/api/4/start-image/720*1184" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         

@@ -232,18 +232,17 @@
     return [DateUtil dateString:daily.date fromFormat:@"yyyyMMdd" toFormat:@"MM月dd日 EEEE"];
    
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//    return 0;
-//}
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    
-//    PCHeaderView* header = [[PCHeaderView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
-//    PCDailies *daily=self.dailies[section];
-//    header.text = [DateUtil dateString:daily.date fromFormat:@"yyyyMMdd" toFormat:@"MM月dd日 EEEE"];
-//    
-//    return header;
-//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+    UIView* footerView = [[UIView alloc]init];
+    return footerView;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.1;
+}
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
