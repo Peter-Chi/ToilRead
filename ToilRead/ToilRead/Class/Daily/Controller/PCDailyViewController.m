@@ -28,12 +28,6 @@
 /** 日报 */
 @property (nonatomic , strong) NSMutableArray *dailies;
 
-/** 日期 */
-@property (nonatomic , strong) NSMutableArray *dates;
-
-/** topStory */
-@property (nonatomic , strong) NSArray *topStory;
-
 /** 网络请求管理者 */
 @property (nonatomic , strong) AFHTTPSessionManager *manager;
 
@@ -49,15 +43,6 @@
     return _manager;
 }
 
--(NSArray *)topStory
-{
-    if(!_topStory) {
-        _topStory=[[NSArray alloc]init];
-    }
-    return _topStory;
-}
-
-
 -(NSMutableArray *)dailies
 {
     if(!_dailies) {
@@ -66,19 +51,21 @@
     return _dailies;
 }
 
--(NSMutableArray *)dates
-{
-    if(!_dates) {
-        _dates=[[NSMutableArray alloc]init];
-    }
-    return _dates;
-}
 
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [PCDailies mj_setupObjectClassInArray:^NSDictionary *{
+        return @{
+                 @"stories" : @"PCStory",
+                 // @"statuses" : [Status class],
+                 @"top_stories" : @"PCTopStory"
+                 // @"ads" : [Ad class]
+                 };
+    }];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PCDailyViewCell class]) bundle:nil] forCellReuseIdentifier:@"PCDailyViewCell"];
     self.tableView.rowHeight = 100;
@@ -104,7 +91,8 @@
     
     NSMutableArray *titles = [[NSMutableArray alloc]init];
     
-    for (PCTopStory *ts in self.topStory) {
+   PCDailies *daily = self.dailies[0];
+    for (PCTopStory *ts in daily.top_stories) {
         [imagesURLStrings addObject:ts.image];
         [titles addObject:ts.title];
          };
@@ -131,12 +119,14 @@
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     PCStoryBodyViewController *storyB = [[PCStoryBodyViewController alloc]init];
-    PCTopStory *topS = self.topStory[index];
+    PCDailies *daily = self.dailies[0];
+    PCTopStory *topS = daily.top_stories[index];
     storyB.id = topS.id;
     
     [self.navigationController pushViewController:storyB animated:YES];
   
 }
+
 
 - (void)loadNewDailies
 {
@@ -146,17 +136,18 @@
     [self.manager GET:@"http://news-at.zhihu.com/api/4/news/latest" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
- 
+        
+      
         PCDailies *daily = [[PCDailies alloc]init];
         daily = [PCDailies mj_objectWithKeyValues:responseObject];
+        
         if (![daily isEqual:self.dailies.firstObject]) {
             self.dailies = nil;
-            self.dates = nil;
+           
             [self.dailies addObject:daily];
-            [self.dates addObject:daily.date];
+       
         }
         
-        self.topStory = [PCTopStory mj_objectArrayWithKeyValuesArray:responseObject[@"top_stories"]];
         
         [self setCycleScrollView];
 
@@ -181,20 +172,22 @@
 {
     
     [self.manager.operationQueue cancelAllOperations];
-    NSDate *beforeDate = [[DateUtil stringToDate:self.dates.lastObject format:@"yyyyMMdd"] dateByAddingTimeInterval:-24*60*60];
-    NSString *Str = [DateUtil dateString:beforeDate withFormat:@"yyyyMMdd"];
+    
+    PCDailies *lastDaily =self.dailies.lastObject;
+    
+
+    NSString *Str = lastDaily.date;
+   
     NSString *urlStr = [NSString stringWithFormat:@"http://news.at.zhihu.com/api/4/news/before/%@",Str];
     
     [self.manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-    
         
-        PCDailies *daily = [[PCDailies alloc]init];
-        daily = [PCDailies mj_objectWithKeyValues:responseObject];
-        [self.dailies addObject:daily];
-        [self.dates addObject:daily.date];
+        PCDailies *newDaily = [[PCDailies alloc]init];
+        newDaily = [PCDailies mj_objectWithKeyValues:responseObject];
+        [self.dailies addObject:newDaily];
         
         [self.tableView reloadData];
         [self.tableView.mj_footer endRefreshing];
@@ -218,10 +211,10 @@
     PCDailies *daily=self.dailies[section];
     return daily.stories.count;
 }
-- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 44;
-}
+//- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//    return 44;
+//}
 //设置组名
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     if (section==0) {
@@ -243,14 +236,12 @@
     return 0.1;
 }
 
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PCDailyViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PCDailyViewCell"];
     
     PCDailies *daily=self.dailies[indexPath.section];
-    PCStory *story=[PCStory mj_objectWithKeyValues:(daily.stories[indexPath.row])];
-    cell.story = story;
+  
+    cell.story = daily.stories[indexPath.row];
     
     return cell;
 }
@@ -258,7 +249,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     PCDailies *daily=self.dailies[indexPath.section];
-    PCStory *story=[PCStory mj_objectWithKeyValues:(daily.stories[indexPath.row])];
+    PCStory *story= daily.stories[indexPath.row];
     
     PCStoryBodyViewController *storyB = [[PCStoryBodyViewController alloc]init];
     storyB.id = story.id;

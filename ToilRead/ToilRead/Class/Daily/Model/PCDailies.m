@@ -10,6 +10,12 @@
 
 @implementation PCDailies
 
-
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{
+             @"stories":@"PCStory",
+             @"top_stories":@"PCTopStory",
+             };
+}
 
 @end
