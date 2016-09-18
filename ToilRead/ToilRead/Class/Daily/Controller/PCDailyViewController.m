@@ -55,14 +55,12 @@
 }
 
 
-
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //清空导航栏和状态栏颜色
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
-
     
+    //模型-数组-模型嵌套的MJExtension方法
     [PCDailies mj_setupObjectClassInArray:^NSDictionary *{
         return @{
                  @"stories" : @"PCStory",
@@ -71,18 +69,18 @@
                  // @"ads" : [Ad class]
                  };
     }];
-    
+    //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PCDailyViewCell class]) bundle:nil] forCellReuseIdentifier:@"PCDailyViewCell"];
-    self.tableView.rowHeight = 100;
+    self.tableView.rowHeight = 100;//cell 高度
     self.automaticallyAdjustsScrollViewInsets = NO;
     [SVProgressHUD show];
-    
+    //上拉刷新
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewDailies)];
     header.lastUpdatedTimeLabel.hidden = YES;
     header.stateLabel.hidden = YES;
     self.tableView.mj_header = header;
     [self.tableView.mj_header beginRefreshing];
-
+    //下拉刷新
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreDailies)];
     self.tableView.mj_footer.hidden = NO;
    
@@ -92,10 +90,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-
-
     [self scrollViewDidScroll:self.tableView];
-   // [self.navigationController.navigationBar lt_setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0]];
+
     //去掉线
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     
@@ -109,7 +105,7 @@
     [self.navigationController.navigationBar lt_reset];
   
 }
-
+//tableview滚动时调用  设置导航栏透明度 以及导航栏隐藏
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     UIColor * color = [UIColor colorWithRed:51.0 / 255
@@ -128,6 +124,7 @@
     [self adjustNavigationAlpha];
     
 }
+//判断是否需要隐藏导航栏，让tableview的headerView显示
 - (void)adjustNavigationAlpha
 {
     NSInteger secondSectionOffsetY =[self.tableView numberOfRowsInSection:0]*100 + 200;
@@ -149,10 +146,10 @@
     }
 }
 
-
+//设置图片轮播器 SDCycleScrollView
 -(void)setCycleScrollView
 {
-    
+    //SDCycleScrollView 的图片和文字使用数组
     NSMutableArray *imagesURLStrings = [[NSMutableArray alloc]init];
     
     NSMutableArray *titles = [[NSMutableArray alloc]init];
@@ -181,7 +178,7 @@
     
     self.tableView.tableHeaderView = cycleScrollView;
 }
-
+//监听轮播器点击
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     PCStoryBodyViewController *storyB = [[PCStoryBodyViewController alloc]init];
@@ -192,8 +189,7 @@
     [self.navigationController pushViewController:storyB animated:YES];
   
 }
-
-
+//上拉刷新
 - (void)loadNewDailies
 {
     [self.manager.operationQueue cancelAllOperations ];
@@ -233,7 +229,7 @@
     
 
 }
-
+//下拉加载
 - (void)loadMoreDailies
 {
     
