@@ -11,6 +11,7 @@
 		D01B26901D79F69F00CEA212 /* PCStoryBodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01B268F1D79F69F00CEA212 /* PCStoryBodyViewController.m */; };
 		D01B26931D7A072000CEA212 /* PCStoryBody.m in Sources */ = {isa = PBXBuildFile; fileRef = D01B26921D7A072000CEA212 /* PCStoryBody.m */; };
 		D01B26961D7A157800CEA212 /* PCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01B26951D7A157800CEA212 /* PCHeaderView.m */; };
+		D0646FA81D8099DB0010B0E2 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646FA71D8099DB0010B0E2 /* UINavigationBar+Awesome.m */; };
 		D0748EC01D7AC31100316AB4 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EB31D7AC31100316AB4 /* TAAbstractDotView.m */; };
 		D0748EC11D7AC31100316AB4 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EB51D7AC31100316AB4 /* TAAnimatedDotView.m */; };
 		D0748EC21D7AC31100316AB4 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0748EB71D7AC31100316AB4 /* TADotView.m */; };
@@ -57,6 +58,8 @@
 		D01B26921D7A072000CEA212 /* PCStoryBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCStoryBody.m; sourceTree = "<group>"; };
 		D01B26941D7A157800CEA212 /* PCHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHeaderView.h; sourceTree = "<group>"; };
 		D01B26951D7A157800CEA212 /* PCHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHeaderView.m; sourceTree = "<group>"; };
+		D0646FA61D8099DB0010B0E2 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		D0646FA71D8099DB0010B0E2 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		D0748EB21D7AC31100316AB4 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
 		D0748EB31D7AC31100316AB4 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
 		D0748EB41D7AC31100316AB4 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 		D0CB7C4B1D7603F100A63DF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0646FA61D8099DB0010B0E2 /* UINavigationBar+Awesome.h */,
+				D0646FA71D8099DB0010B0E2 /* UINavigationBar+Awesome.m */,
 				D0D841941D788E5300153608 /* PCDailyViewCell.h */,
 				D0D841951D788E5300153608 /* PCDailyViewCell.m */,
 				D0D841961D788E5300153608 /* PCDailyViewCell.xib */,
@@ -602,6 +607,7 @@
 				D09F7A301D781F0A0069EB16 /* PCDailyViewController.m in Sources */,
 				D0748EC31D7AC31100316AB4 /* TAPageControl.m in Sources */,
 				D07AD4821D7ACF7800ABAF19 /* PCTopStory.m in Sources */,
+				D0646FA81D8099DB0010B0E2 /* UINavigationBar+Awesome.m in Sources */,
 				D0748EC51D7AC31100316AB4 /* SDCycleScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

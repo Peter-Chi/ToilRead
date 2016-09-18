@@ -45,9 +45,8 @@
       "scale" : "2x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon-60@3x.png",
+      "size" : "60x60",
       "scale" : "3x"
     },
     {
@@ -114,6 +113,12 @@
       "idiom" : "ipad",
       "filename" : "icon-83.5@2x.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "car",
+      "filename" : "icon-60@3x.png",
+      "scale" : "3x"
     },
     {
       "size" : "24x24",

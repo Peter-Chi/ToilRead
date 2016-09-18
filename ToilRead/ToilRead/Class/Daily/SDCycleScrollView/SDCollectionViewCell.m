@@ -65,6 +65,7 @@
 {
     _titleLabelTextFont = titleLabelTextFont;
     _titleLabel.font = titleLabelTextFont;
+    
 }
 
 
@@ -80,6 +81,7 @@
     UILabel *titleLabel = [[UILabel alloc] init];
     _titleLabel = titleLabel;
     _titleLabel.hidden = YES;
+    
     [self.contentView addSubview:titleLabel];
 }
 

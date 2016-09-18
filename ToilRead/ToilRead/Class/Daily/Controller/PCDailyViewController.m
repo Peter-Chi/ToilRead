@@ -19,9 +19,12 @@
 #import "PCStoryBodyViewController.h"
 #import "PCHeaderView.h"
 #import "SDCycleScrollView.h"
+#import "UINavigationBar+Awesome.h"
 
 
 @interface PCDailyViewController () <UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate>
+#define NAVBAR_CHANGE_POINT 100
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
@@ -57,6 +60,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
+
     
     [PCDailies mj_setupObjectClassInArray:^NSDictionary *{
         return @{
@@ -69,7 +74,7 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PCDailyViewCell class]) bundle:nil] forCellReuseIdentifier:@"PCDailyViewCell"];
     self.tableView.rowHeight = 100;
-    //self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [SVProgressHUD show];
     
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewDailies)];
@@ -83,6 +88,67 @@
    
     
     }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+
+
+    [self scrollViewDidScroll:self.tableView];
+   // [self.navigationController.navigationBar lt_setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0]];
+    //去掉线
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
+   
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.tableView.delegate = self;
+    [self.navigationController.navigationBar lt_reset];
+  
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    UIColor * color = [UIColor colorWithRed:51.0 / 255
+                                      green:153.0 / 255
+                                       blue:230.0 / 255
+                                      alpha:1];
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY > NAVBAR_CHANGE_POINT) {
+        self.tableView.delegate = self;
+        CGFloat alpha = MIN(1, 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64));
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+    } else {
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+    }
+    
+    [self adjustNavigationAlpha];
+    
+}
+- (void)adjustNavigationAlpha
+{
+    NSInteger secondSectionOffsetY =[self.tableView numberOfRowsInSection:0]*100 + 200;
+    
+  //  NSLog(@"%ld",(long)secondSectionOffsetY);
+    if (self.tableView.contentOffset.y > secondSectionOffsetY) {
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        //这里不能直接隐藏navigationbar，会导致tableview的insettop失控
+        self.navigationItem.title = @"";
+        //缩短背景视图避免其挡住section header
+        [self.navigationController.navigationBar setBackgroundLayerHeight:20];
+    } else {
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        self.navigationItem.title = @"今日热闻";
+        NSDictionary * attriBute = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:16]};
+        [self.navigationController.navigationBar setTitleTextAttributes:attriBute];
+        
+        [self.navigationController.navigationBar setBackgroundLayerHeight:64];
+    }
+}
+
 
 -(void)setCycleScrollView
 {
@@ -101,7 +167,7 @@
     CGFloat w = self.view.bounds.size.width;
     
     
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 280, w, 220) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, w, 220) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
     
     cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
@@ -211,30 +277,50 @@
     PCDailies *daily=self.dailies[section];
     return daily.stories.count;
 }
-//- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    return 44;
-//}
 //设置组名
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    if (section==0) {
-        return @"今日热文";
-    }
-    
+//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    if (section==0) {
+//        return @"今日热文";
+//    }
+//    
+//    PCDailies *daily=self.dailies[section];
+//    return [DateUtil dateString:daily.date fromFormat:@"yyyyMMdd" toFormat:@"MM月dd日 EEEE"];
+//   
+//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *header = [[UIView alloc]init];
+    header.backgroundColor = [UIColor colorWithRed:51.0 / 255
+                                             green:153.0 / 255
+                                              blue:230.0 / 255
+                                             alpha:1];
+    UILabel *label = [[UILabel alloc]init];
+    label.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44);
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
     PCDailies *daily=self.dailies[section];
-    return [DateUtil dateString:daily.date fromFormat:@"yyyyMMdd" toFormat:@"MM月dd日 EEEE"];
-   
+    label.text = [DateUtil dateString:daily.date fromFormat:@"yyyyMMdd" toFormat:@"MM月dd日 EEEE"];
+    
+    [header addSubview:label];
+    return header;
+}
+- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0)
+        return 0;
+    
+    return 44;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    
-    UIView* footerView = [[UIView alloc]init];
-    return footerView;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 0.1;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    
+//    UIView* footerView = [[UIView alloc]init];
+//    return footerView;
+//}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+//    return 0.1;
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PCDailyViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PCDailyViewCell"];

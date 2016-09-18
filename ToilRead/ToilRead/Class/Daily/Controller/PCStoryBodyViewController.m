@@ -12,6 +12,7 @@
 #import <UIImageView+WebCache.h>
 #import "PCStoryBody.h"
 #import <MJExtension.h>
+#import "UINavigationBar+Awesome.h"
 
 @interface PCStoryBodyViewController ()<UIWebViewDelegate>
 @property (strong, nonatomic) UIWebView *webView;
@@ -22,9 +23,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
 
-    self.navigationItem.title = @"文章正文";
+    
+   // self.hidesBottomBarWhenPushed = YES;
+   // self.hidesBottomBarWhenPushed = YES;
+   // self.tabBarController.tabBar.hidden = YES;
+
+
+    self.navigationItem.title = @"";
     
     self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     self.webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);

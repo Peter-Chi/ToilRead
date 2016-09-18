@@ -15,26 +15,26 @@
 @implementation PCNavigationController
 
 
-+ (void)initialize
-{
-    // 当导航栏用在XMGNavigationController中, appearance设置才会生效
-    //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
-    UINavigationBar *bar = [UINavigationBar appearance];
-    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-    [bar setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20]}];
-    
-    // 设置item
-    UIBarButtonItem *item = [UIBarButtonItem appearance];
-    // UIControlStateNormal
-    NSMutableDictionary *itemAttrs = [NSMutableDictionary dictionary];
-    itemAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
-    itemAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
-    [item setTitleTextAttributes:itemAttrs forState:UIControlStateNormal];
-    // UIControlStateDisabled
-    NSMutableDictionary *itemDisabledAttrs = [NSMutableDictionary dictionary];
-    itemDisabledAttrs[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
-    [item setTitleTextAttributes:itemDisabledAttrs forState:UIControlStateDisabled];
-}
+//+ (void)initialize
+//{
+//    // 当导航栏用在XMGNavigationController中, appearance设置才会生效
+//    //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
+//    UINavigationBar *bar = [UINavigationBar appearance];
+//    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+//    [bar setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20]}];
+//    
+//    // 设置item
+//    UIBarButtonItem *item = [UIBarButtonItem appearance];
+//    // UIControlStateNormal
+//    NSMutableDictionary *itemAttrs = [NSMutableDictionary dictionary];
+//    itemAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+//    itemAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+//    [item setTitleTextAttributes:itemAttrs forState:UIControlStateNormal];
+//    // UIControlStateDisabled
+//    NSMutableDictionary *itemDisabledAttrs = [NSMutableDictionary dictionary];
+//    itemDisabledAttrs[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+//    [item setTitleTextAttributes:itemDisabledAttrs forState:UIControlStateDisabled];
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
