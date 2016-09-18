@@ -25,13 +25,6 @@
     [super viewDidLoad];
     
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
-
-    
-   // self.hidesBottomBarWhenPushed = YES;
-   // self.hidesBottomBarWhenPushed = YES;
-   // self.tabBarController.tabBar.hidden = YES;
-
-
     self.navigationItem.title = @"";
     
     self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
